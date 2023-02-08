@@ -23,7 +23,7 @@ function AddEmployees(){
 
     const onSubmit= async(e) => {
         e.preventDefault();
-        await axios.post("http://react-springboot-backend-production.up.railway.app/employees",employee);
+        await axios.post("https://react-springboot-backend-production.up.railway.app/employees",employee);
         navigate("/");
     }
 

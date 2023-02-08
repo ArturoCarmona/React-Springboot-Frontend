@@ -15,13 +15,13 @@ function TableEmployees(){
     },[]);
 
     const getEmployees = async() => {
-        const result= await axios.get("http://react-springboot-backend-production.up.railway.app/employees");
+        const result= await axios.get("https://react-springboot-backend-production.up.railway.app/employees");
         setEmployees(result.data);
     };
 
     /* ====================== DELETE METOD ========================= */
     const deleteEmployee = async (id)=> {
-        await axios.delete(`http://react-springboot-backend-production.up.railway.app/employees/delete/${id}`)
+        await axios.delete(`https://react-springboot-backend-production.up.railway.app/employees/delete/${id}`)
         .then( () =>{console.log("done!")})
         .then( () => getEmployees());
     }

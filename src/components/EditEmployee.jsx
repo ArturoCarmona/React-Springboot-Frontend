@@ -28,13 +28,13 @@ function EditEmployee(){
 
     const onSubmit = async(e) =>{
         e.preventDefault(e);
-        await axios.put(`http://react-springboot-backend-production.up.railway.app/employees/${id}`,employee)
+        await axios.put(`https://react-springboot-backend-production.up.railway.app/employees/${id}`,employee)
         .then( (response)=>{setEmployee(response.data)});
         navigate("/");
     }
 
     const loadEmployees = async() => {
-        const result= await axios.get(`http://react-springboot-backend-production.up.railway.app/employees/id/${id}`);
+        const result= await axios.get(`https://react-springboot-backend-production.up.railway.app/employees/id/${id}`);
         setEmployee(result.data);
     };
 
